@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#FAFAF7">
+  <title>龍之介と智華の結婚式</title>
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="龍之介と智華の結婚式">
+  <meta property="og:title" content="龍之介と智華の結婚式">
+  <meta property="og:description" content="富山 龍之介 · 塩田 智華　2026.04.18">
+  <meta property="og:image" content="https://10380r.github.io/ryunosuke-tomoka-wedding/ogp.png">
+  <meta property="og:url" content="https://10380r.github.io/ryunosuke-tomoka-wedding/">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="龍之介と智華の結婚式">
+  <meta name="twitter:description" content="富山 龍之介 · 塩田 智華　2026.04.18">
+  <meta name="twitter:image" content="https://10380r.github.io/ryunosuke-tomoka-wedding/ogp.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&amp;family=Dela+Gothic+One&amp;family=Noto+Sans+JP:wght@300;400;800&amp;family=Noto+Serif+JP:wght@400;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+  <script src="seats.js" defer></script>
+</head>
+<body data-page="detail">
+  <main class="page-frame">
+    <header class="page-top">
+      <a class="back-link" href="index.html" data-nav>← Top</a>
+    </header>
+
+    <section class="content-block">
+      <div class="section-head">
+        <h1 class="section-title">席次表</h1>
+      </div>
+
+      <div class="seat-switcher">
+        <div class="seat-layout" id="seat-layout" aria-label="会場レイアウト">
+          <p class="seat-layout-note">新郎新婦席に近い順に着席いただいています</p>
+          <svg class="seat-map" viewBox="0 0 390 720" role="img" aria-labelledby="seat-map-title">
+            <title id="seat-map-title">会場レイアウト</title>
+            <rect class="hall-outline" x="1" y="1" width="388" height="718" fill="none" stroke="var(--rule)" stroke-width="1" />
+
+            <g class="couple-zone" aria-hidden="true">
+              <rect class="couple-shape" x="85" y="28" width="220" height="52" rx="2" fill="none" stroke="var(--ink)" stroke-width="1" />
+              <text class="couple-label" x="195" y="54" text-anchor="middle" dominant-baseline="middle">新郎新婦席</text>
+            </g>
+
+            <g class="seat-zone" data-table="omiya" tabindex="0" role="button" aria-label="大宮南高校のお友達">
+              <rect class="table-hitbox" x="4" y="124" width="202" height="84" fill="transparent" pointer-events="all" />
+              <rect class="table-shape" x="20" y="140" width="170" height="52" rx="2" fill="none" stroke="var(--ink)" stroke-width="1" />
+              <text class="seat-map-label" x="105" y="166" text-anchor="middle" dominant-baseline="middle">大宮南高校のお友達</text>
+            </g>
+
+            <g class="seat-zone" data-table="future" tabindex="0" role="button" aria-label="フューチャーと周辺のお友達">
+              <rect class="table-hitbox" x="184" y="124" width="202" height="84" fill="transparent" pointer-events="all" />
+              <rect class="table-shape" x="200" y="140" width="170" height="52" rx="2" fill="none" stroke="var(--ink)" stroke-width="1" />
+              <text class="seat-map-label" x="285" y="159" text-anchor="middle" dominant-baseline="middle">フューチャーと</text>
+              <text class="seat-map-label" x="285" y="175" text-anchor="middle" dominant-baseline="middle">周辺のお友達</text>
+            </g>
+
+            <g class="seat-zone" data-table="hokudai" tabindex="0" role="button" aria-label="北海道大学のお友達">
+              <rect class="table-hitbox" x="4" y="284" width="202" height="84" fill="transparent" pointer-events="all" />
+              <rect class="table-shape" x="20" y="300" width="170" height="52" rx="2" fill="none" stroke="var(--ink)" stroke-width="1" />
+              <text class="seat-map-label" x="105" y="326" text-anchor="middle" dominant-baseline="middle">北海道大学のお友達</text>
+            </g>
+
+            <g class="seat-zone" data-table="toyama" tabindex="0" role="button" aria-label="富山家">
+              <rect class="table-hitbox" x="4" y="464" width="202" height="84" fill="transparent" pointer-events="all" />
+              <rect class="table-shape" x="20" y="480" width="170" height="52" rx="2" fill="none" stroke="var(--ink)" stroke-width="1" />
+              <text class="seat-map-label" x="105" y="506" text-anchor="middle" dominant-baseline="middle">富山家</text>
+            </g>
+
+            <g class="seat-zone" data-table="shiota" tabindex="0" role="button" aria-label="塩田家">
+              <rect class="table-hitbox" x="184" y="464" width="202" height="84" fill="transparent" pointer-events="all" />
+              <rect class="table-shape" x="200" y="480" width="170" height="52" rx="2" fill="none" stroke="var(--ink)" stroke-width="1" />
+              <text class="seat-map-label" x="285" y="506" text-anchor="middle" dominant-baseline="middle">塩田家</text>
+            </g>
+          </svg>
+        </div>
+
+        <div class="seat-detail" id="seat-detail" aria-live="polite">
+          <button class="detail-back" id="detail-back" type="button">← 会場レイアウトへ戻る</button>
+          <h2 class="seat-detail-title" id="seat-detail-title"></h2>
+          <p class="seat-direction">↑ 新郎新婦席</p>
+          <p class="seat-arrangement-note">上から新郎新婦席に近い順に並んでいます</p>
+          <div class="seat-grid" id="seat-grid"></div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer-nav">
+      <a class="footer-home" href="index.html" data-nav>Top へ戻る</a>
+    </footer>
+  </main>
+</body>
+</html>
