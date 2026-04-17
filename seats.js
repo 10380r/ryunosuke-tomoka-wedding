@@ -16,7 +16,7 @@ const tables = {
       [{ kana: "りお", name: "Leo Zhong", honorific: "様" }, { kana: "よこぎ みほ", name: "横木 美保", honorific: "様" }],
       [{ kana: "わたなべ ゆり", name: "渡邉 百合", honorific: "様" }, { kana: "なかむら ももか", name: "中村 百花", honorific: "様" }],
       [{ kana: "きくち のりこ", name: "菊地 紀子", honorific: "様" }, { kana: "さめじま なつこ", name: "鮫島 奈津子", honorific: "様" }],
-      [{ kana: "もりごだ ろーしゃな", name: "森五田 ローシャナ", honorific: "様" }, { kana: "たかはし ゆうほ", name: "高橋 結帆", honorific: "様" }],
+      [{ kana: "もりごだ ろーしゃな", name: "森五田ローシャナ", honorific: "様" }, { kana: "たかはし ゆうほ", name: "高橋 結帆", honorific: "様" }],
       [{ kana: "さかもと なお", name: "坂本 菜緒", honorific: "様" }, { kana: "たかはし ひでかず", name: "高橋 秀和", honorific: "様" }],
       [{ kana: "たなか としや", name: "田中 利弥", honorific: "様" }, { kana: "ななめき だいすけ", name: "斜木 大輔", honorific: "様" }],
       [{ kana: "あおやぎ ゆうと", name: "青柳 雄登", honorific: "様" }, { kana: "みつはし けいすけ", name: "三橋 慶輔", honorific: "様" }],
