@@ -290,6 +290,15 @@ body.is-leaving .page-frame {
   line-break: strict;
 }
 
+.timeline-place {
+  color: var(--sub);
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  line-height: 1.6;
+}
+
 .timeline-note {
   display: block;
   margin-top: 4px;
@@ -323,6 +332,15 @@ body.is-leaving .page-frame {
   word-break: normal;
   overflow-wrap: break-word;
   line-break: strict;
+}
+
+.drink-meta {
+  color: var(--sub);
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  line-height: 1.6;
 }
 
 .dish-list {
