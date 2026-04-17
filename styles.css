@@ -165,6 +165,19 @@ body.is-leaving .page-frame {
   line-height: 1.5;
 }
 
+.home-icon-wrap {
+  position: fixed;
+  left: 50%;
+  bottom: calc(20px + env(safe-area-inset-bottom, 0px));
+  transform: translateX(-50%);
+}
+
+.home-icon {
+  display: block;
+  width: 48px;
+  height: auto;
+}
+
 .page-top {
   margin-bottom: 20px;
 }
