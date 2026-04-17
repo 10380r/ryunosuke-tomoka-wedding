@@ -86,8 +86,11 @@ if (seatLayout && seatDetail && seatSwitcher && seatGrid && seatDetailTitle && d
     unit.style.animationDelay = `${index * 0.05}s`;
     unit.innerHTML = `
       <div class="seat-name-row">
-        <span class="seat-name">${seat.name}</span>
-        ${seat.honorific ? `<span class="seat-honorific">${seat.honorific}</span>` : ""}
+        <span class="seat-name-honorific">
+          <span class="seat-name">${seat.name}</span>${seat.honorific
+            ? `<span class="seat-honorific">&nbsp;${seat.honorific}</span>`
+            : ""}
+        </span>
       </div>
     `;
 

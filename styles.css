@@ -285,9 +285,9 @@ body.is-leaving .page-frame {
 }
 
 .timeline-body {
-  word-break: keep-all;
-  overflow-wrap: break-word;
-  hyphens: none;
+  word-break: normal;
+  overflow-wrap: anywhere;
+  line-break: strict;
 }
 
 .timeline-note {
@@ -320,6 +320,9 @@ body.is-leaving .page-frame {
 .drink-items {
   margin: 0;
   white-space: pre-line;
+  word-break: normal;
+  overflow-wrap: anywhere;
+  line-break: strict;
 }
 
 .dish-list {
@@ -457,6 +460,7 @@ body.is-leaving .page-frame {
   letter-spacing: 0.02em;
   word-break: normal;
   overflow-wrap: break-word;
+  line-break: strict;
   white-space: normal;
   hyphens: none;
 }
@@ -531,6 +535,11 @@ body.is-leaving .page-frame {
   flex-wrap: wrap;
   align-items: baseline;
   gap: 4px;
+}
+
+.seat-name-honorific {
+  display: inline;
+  white-space: nowrap;
 }
 
 .seat-name {
