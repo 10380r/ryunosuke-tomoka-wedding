@@ -420,6 +420,7 @@ body.is-leaving .page-frame {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 12px;
+  align-items: stretch;
 }
 
 .floor-grid--family {
@@ -438,9 +439,11 @@ body.is-leaving .page-frame {
   letter-spacing: 0.04em;
   line-height: 1.6;
   text-align: center;
-  padding: 24px 10px;
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+  padding: 0 10px;
   cursor: pointer;
-  min-height: 90px;
+  height: 90px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -449,7 +452,13 @@ body.is-leaving .page-frame {
 
 .floor-card--tall {
   grid-row: span 2;
-  min-height: 200px;
+  height: calc(90px * 2 + 12px);
+  font-size: 11px;
+  letter-spacing: 0.02em;
+  word-break: normal;
+  overflow-wrap: break-word;
+  white-space: normal;
+  hyphens: none;
 }
 
 .floor-card:active,
