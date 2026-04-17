@@ -36,47 +36,35 @@
 
       <div class="seat-switcher">
         <div class="seat-layout" id="seat-layout" aria-label="会場レイアウト">
-          <p class="seat-layout-note">新郎新婦席に近い順に着席いただいています</p>
-          <svg class="seat-map" viewBox="0 0 390 720" role="img" aria-labelledby="seat-map-title">
-            <title id="seat-map-title">会場レイアウト</title>
-            <rect class="hall-outline" x="1" y="1" width="388" height="718" fill="none" stroke="var(--rule)" stroke-width="1" />
+          <p class="seat-layout-note">テーブル名をタップするとお席の詳細をご確認いただけます</p>
 
-            <g class="couple-zone" aria-hidden="true">
-              <rect class="couple-shape" x="85" y="28" width="220" height="52" rx="2" fill="none" stroke="var(--ink)" stroke-width="1" />
-              <text class="couple-label" x="195" y="54" text-anchor="middle" dominant-baseline="middle">新郎新婦席</text>
-            </g>
+          <div class="floor-map">
+            <div class="floor-couple" aria-hidden="true">
+              新郎新婦席
+            </div>
 
-            <g class="seat-zone" data-table="omiya" tabindex="0" role="button" aria-label="大宮南高校のお友達">
-              <rect class="table-hitbox" x="4" y="124" width="202" height="84" fill="transparent" pointer-events="all" />
-              <rect class="table-shape" x="20" y="140" width="170" height="52" rx="2" fill="none" stroke="var(--ink)" stroke-width="1" />
-              <text class="seat-map-label" x="105" y="166" text-anchor="middle" dominant-baseline="middle">大宮南高校のお友達</text>
-            </g>
+            <div class="floor-grid">
+              <button class="floor-card stagger-item" type="button" data-table="omiya">
+                大宮南高校のお友達
+              </button>
+              <button class="floor-card floor-card--tall stagger-item" type="button" data-table="future">
+                フューチャーと周辺のお友達
+              </button>
+              <button class="floor-card stagger-item" type="button" data-table="hokudai">
+                北海道大学のお友達
+              </button>
+              <div class="floor-spacer" aria-hidden="true"></div>
+            </div>
 
-            <g class="seat-zone" data-table="future" tabindex="0" role="button" aria-label="フューチャーと周辺のお友達">
-              <rect class="table-hitbox" x="184" y="124" width="202" height="84" fill="transparent" pointer-events="all" />
-              <rect class="table-shape" x="200" y="140" width="170" height="52" rx="2" fill="none" stroke="var(--ink)" stroke-width="1" />
-              <text class="seat-map-label" x="285" y="159" text-anchor="middle" dominant-baseline="middle">フューチャーと</text>
-              <text class="seat-map-label" x="285" y="175" text-anchor="middle" dominant-baseline="middle">周辺のお友達</text>
-            </g>
-
-            <g class="seat-zone" data-table="hokudai" tabindex="0" role="button" aria-label="北海道大学のお友達">
-              <rect class="table-hitbox" x="4" y="284" width="202" height="84" fill="transparent" pointer-events="all" />
-              <rect class="table-shape" x="20" y="300" width="170" height="52" rx="2" fill="none" stroke="var(--ink)" stroke-width="1" />
-              <text class="seat-map-label" x="105" y="326" text-anchor="middle" dominant-baseline="middle">北海道大学のお友達</text>
-            </g>
-
-            <g class="seat-zone" data-table="toyama" tabindex="0" role="button" aria-label="富山家">
-              <rect class="table-hitbox" x="4" y="464" width="202" height="84" fill="transparent" pointer-events="all" />
-              <rect class="table-shape" x="20" y="480" width="170" height="52" rx="2" fill="none" stroke="var(--ink)" stroke-width="1" />
-              <text class="seat-map-label" x="105" y="506" text-anchor="middle" dominant-baseline="middle">富山家</text>
-            </g>
-
-            <g class="seat-zone" data-table="shiota" tabindex="0" role="button" aria-label="塩田家">
-              <rect class="table-hitbox" x="184" y="464" width="202" height="84" fill="transparent" pointer-events="all" />
-              <rect class="table-shape" x="200" y="480" width="170" height="52" rx="2" fill="none" stroke="var(--ink)" stroke-width="1" />
-              <text class="seat-map-label" x="285" y="506" text-anchor="middle" dominant-baseline="middle">塩田家</text>
-            </g>
-          </svg>
+            <div class="floor-grid floor-grid--family">
+              <button class="floor-card stagger-item" type="button" data-table="toyama">
+                富山家
+              </button>
+              <button class="floor-card stagger-item" type="button" data-table="shiota">
+                塩田家
+              </button>
+            </div>
+          </div>
         </div>
 
         <div class="seat-detail" id="seat-detail" aria-live="polite">

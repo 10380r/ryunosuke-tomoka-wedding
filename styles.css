@@ -312,10 +312,31 @@ body.is-leaving .page-frame {
   font-weight: 800;
 }
 
-.entry-copy,
+.entry-copy {
+  margin: 0;
+  white-space: normal;
+}
+
 .drink-items {
   margin: 0;
   white-space: pre-line;
+}
+
+.dish-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 6px 16px;
+}
+
+.dish-list li {
+  color: var(--ink);
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1.6;
 }
 
 .drink-table {
@@ -325,8 +346,8 @@ body.is-leaving .page-frame {
 
 .drink-row {
   display: grid;
-  grid-template-columns: 72px minmax(0, 1fr);
-  column-gap: 12px;
+  grid-template-columns: 80px minmax(0, 1fr);
+  column-gap: 16px;
   align-items: start;
 }
 
@@ -375,46 +396,70 @@ body.is-leaving .page-frame {
   text-align: left;
 }
 
-.seat-map {
-  display: block;
+.floor-map {
+  border: 1px solid var(--rule);
+  padding: 20px 16px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.floor-couple {
   width: 100%;
-  height: auto;
-  font-family: "Noto Sans JP", sans-serif;
-  font-size: 13px;
-}
-
-.hall-outline {
-  vector-effect: non-scaling-stroke;
-}
-
-.table-shape {
-  transition: stroke-width 0.15s ease;
-}
-
-.seat-zone {
-  cursor: pointer;
-  outline: none;
-}
-
-.seat-map-label,
-.couple-label {
-  fill: var(--ink);
+  padding: 14px;
+  background: var(--ink);
+  color: var(--bg);
   font-family: "Noto Sans JP", sans-serif;
   font-size: 13px;
   font-weight: 400;
-  letter-spacing: 0;
+  letter-spacing: 0.1em;
+  text-align: center;
 }
 
-@media (hover: hover) {
-  .seat-zone:hover .table-shape {
-    stroke-width: 2;
-  }
+.floor-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
 }
 
-.seat-zone:focus-visible .table-shape,
-.seat-zone:focus .table-shape,
-.seat-zone:active .table-shape {
-  stroke-width: 2;
+.floor-grid--family {
+  margin-top: 8px;
+}
+
+.floor-card {
+  appearance: none;
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  background: rgba(200, 184, 154, 0.12);
+  color: var(--ink);
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  line-height: 1.6;
+  text-align: center;
+  padding: 24px 10px;
+  cursor: pointer;
+  min-height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.floor-card--tall {
+  grid-row: span 2;
+  min-height: 200px;
+}
+
+.floor-card:active,
+.floor-card:focus-visible {
+  background: rgba(200, 184, 154, 0.28);
+  border-color: var(--ink);
+}
+
+.floor-spacer {
+  min-height: 0;
 }
 
 .detail-back {
@@ -492,6 +537,14 @@ body.is-leaving .page-frame {
   font-family: "Noto Sans JP", sans-serif;
   font-size: 11px;
   font-weight: 400;
+}
+
+.drink-label {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  padding-top: 3px;
 }
 
 @keyframes seatReveal {
